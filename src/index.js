@@ -16,6 +16,15 @@ export function isError(action) {
   return action.error === true;
 }
 
+export default function Action(type, payload, error, meta) {
+  return {
+    type,
+    payload,
+    error,
+    meta,
+  };
+}
+
 function isValidKey(key) {
   return [
     'type',
